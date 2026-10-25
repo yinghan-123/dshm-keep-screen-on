@@ -1,0 +1,8 @@
+# dshm-keep-screen-on：屏幕常亮桥（bundle patch）。
+#
+# 只挂一行 loader 行：host 半部做活动检测并暴露 /dshm-keep-screen-on，
+# client 半部（client.js）在 ArkWeb 页面里按状态申请/释放 Screen Wake Lock。
+# 停用：设置 → 插件 里停用，或删掉 profile 中这一行；改完划掉后台重开 DSHM。
+- insert:
+    - id: dshm-keep-screen-on
+      name: 'dshm-keep-screen-on'

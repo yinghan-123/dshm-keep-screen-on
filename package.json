@@ -1,0 +1,47 @@
+{
+  "name": "dshm-keep-screen-on",
+  "version": "0.2.1",
+  "description": "DSHM 屏幕常亮桥：有 agent / 后台任务在跑时，ArkWeb 页面持有 Screen Wake Lock，让 HarmonyOS 不自动熄屏。",
+  "license": "MIT",
+  "author": "dshm-keep-screen-on contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yinghan-123/dshm-keep-screen-on.git"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "dshm",
+    "ohos",
+    "keep-screen-on",
+    "wake-lock",
+    "harmonyos"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-primitives"
+      ]
+    }
+  }
+}
