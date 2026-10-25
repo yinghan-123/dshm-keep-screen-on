@@ -12,15 +12,12 @@
 ## 安装
 
 ```bash
-# 从 GitHub 安装（推荐）
-dsh plugin install github.com/yinghan-123/dshm-keep-screen-on
+# DSHM 端侧（没有真 pnpm，命令由 Host 的假壳接住，同步返回安装结果）
+pnpm add github.com/yinghan-123/dshm-keep-screen-on
 ```
 
-本地开发时也可以直接装源码目录：
-
-```bash
-dsh plugin install /path/to/dshm-keep-screen-on
-```
+（也可以在 设置 → 插件 的「安装插件」输入框里填同样的
+`github.com/yinghan-123/dshm-keep-screen-on`，效果相同。）
 
 装完 **划掉后台重开 DSHM**（客户端 bundle 只在启动时扫描）。
 
